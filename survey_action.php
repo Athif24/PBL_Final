@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once('model/survey_model.php');
 
 // Instantiate the survey class
@@ -8,7 +9,7 @@ $act = isset($_GET['act']) ? $_GET['act'] : '';
 
 if ($act == 'simpan') {
     $data = [
-        'user_id' => isset($_POST['user_id']) ? $_POST['user_id'] : '',
+        'user_id' => $_SESSION['user_id'],
         'survey_jenis' => isset($_POST['survey_jenis']) ? $_POST['survey_jenis'] : '',
         'survey_kode' => isset($_POST['survey_kode']) ? $_POST['survey_kode'] : '',
         'survey_nama' => isset($_POST['survey_nama']) ? $_POST['survey_nama'] : '',
@@ -16,12 +17,8 @@ if ($act == 'simpan') {
         'survey_tanggal' => isset($_POST['survey_tanggal']) ? $_POST['survey_tanggal'] : ''
     ];
 
-    if (!empty($data['user_id']) && !empty($data['survey_jenis']) && !empty($data['survey_kode']) && !empty($data['survey_nama']) && !empty($data['survey_deskripsi'])&& !empty($data['survey_tanggal'])) {
-        $survey->insertData($data);
-        header('Location: survey.php?status=sukses&message=Data berhasil disimpan');
-    } else {
-        header('Location: survey.php?status=gagal&message=Semua field harus diisi');
-    }
+    $survey->insertData($data);
+    header('Location: survey.php?status=sukses&message=Data berhasil disimpan');
     exit();
 }
 
@@ -30,7 +27,7 @@ if ($act == 'edit') {
 
     if (!empty($id)) {
         $data = [
-            'user_id' => isset($_POST['user_id']) ? $_POST['user_id'] : '',
+            'user_id' => $_SESSION['user_id'],
             'survey_jenis' => isset($_POST['survey_jenis']) ? $_POST['survey_jenis'] : '',
             'survey_kode' => isset($_POST['survey_kode']) ? $_POST['survey_kode'] : '',
             'survey_nama' => isset($_POST['survey_nama']) ? $_POST['survey_nama'] : '',
@@ -38,14 +35,8 @@ if ($act == 'edit') {
             'survey_tanggal' => isset($_POST['survey_tanggal']) ? $_POST['survey_tanggal'] : ''
         ];
 
-        if (!empty($data['user_id']) && !empty($data['survey_jenis']) && !empty($data['survey_kode']) && !empty($data['survey_nama']) &&!empty($data['survey_deskripsi']) && !empty($data['survey_tanggal'])) {
-            $survey->updateData($id, $data);
-            header('Location: survey.php?status=sukses&message=Data berhasil diubah');
-        } else {
-            header('Location: survey.php?status=gagal&message=Semua field harus diisi');
-        }
-    } else {
-        header('Location: survey.php?status=gagal&message=ID survey tidak ditemukan');
+        $survey->updateData($id, $data);
+        header('Location: survey.php?status=sukses&message=Data berhasil diubah');
     }
     exit();
 }

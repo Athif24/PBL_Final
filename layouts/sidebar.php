@@ -45,7 +45,7 @@
             </li>
             <li class="nav-item">
               <a href="survey.php" class="nav-link <?php echo ($menu == 'survey')? 'active':'' ?>">
-                <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-poll-h"></i>
                 <p>
                   Survey
                 </p>
@@ -53,15 +53,15 @@
             </li>
             <li class="nav-item">
               <a href="bank_soal.php" class="nav-link <?php echo ($menu == 'bank_soal')? 'active':'' ?>">
-                <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-question-circle"></i>
                 <p>
-                  Bank Soal
+                  Survey Soal
                 </p>
               </a>
             </li>
             <li class="nav-item">
             <a href="data_user.php" class="nav-link <?php echo ($menu == 'data_user')? 'active' : '' ?>">
-              <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-user"></i>
               <p>
                 Pengguna
               </p>
@@ -69,7 +69,7 @@
           </li>
           <li class="nav-item">
             <a href="kategori.php" class="nav-link <?php echo ($menu == 'kategori')? 'active' : '' ?>">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-filter"></i>
               <p>
                 Kategori Soal
               </p>
@@ -77,7 +77,7 @@
           </li>
           <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-reply-all"></i>
                 <p>
                   Responden
                   <i class="fas fa-angle-left right"></i>
@@ -86,38 +86,38 @@
               </a>
               <ul class="nav nav-treeview">
               <li class="nav-item">
-              <a href="t_responden_dosen.php" class="nav-link <?php echo ($menu == 't_responden_dosen')? 'active' : '' ?>">
-                    <i class="far fa-circle nav-icon"></i>
+              <a href="jawaban_dosen.php" class="nav-link <?php echo ($menu == 't_responden_dosen')? 'active' : '' ?>">
+              <i class="nav-icon fas fa-chalkboard-teacher"></i>
                     <p>Dosen</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="jawaban_mahasiswa.php" class="nav-link <?php echo ($menu == 't_responden_mahasiswa')? 'active' : '' ?>">
-                    <i class="far fa-circle nav-icon"></i>
+                  <i class="nav-icon fas fa-user-graduate"></i>
                     <p>Mahasiswa</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../layout/boxed.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>TenagaPendidik</p>
+                  <a href="jawaban_tendik.php" class="nav-link <?php echo ($menu == 't_responden_tendik')? 'active' : '' ?>">
+                  <i class="nav-icon fas fa-university"></i>
+                    <p>Tenaga Pendidik</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../layout/fixed-sidebar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
+                  <a href="jawaban_ortu.php" class="nav-link <?php echo ($menu == 't_responden_ortu')? 'active' : '' ?>">
+                  <i class="nav-icon fas fa-male"></i>
                     <p>Orang Tua</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../layout/fixed-sidebar-custom.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
+                  <a href="jawaban_alumni.php" class="nav-link  <?php echo ($menu == 't_responden_alumni')? 'active' : '' ?>">
+                  <i class="nav-icon fas fa-medal"></i>
                     <p>Alumni</small></p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../layout/fixed-topnav.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
+                  <a href="jawaban_industri.php" class="nav-link  <?php echo ($menu == 't_responden_industri')? 'active' : '' ?>">
+                  <i class="nav-icon fas fa-industry"></i>
                     <p>industri</p>
                   </a>
                 </li>

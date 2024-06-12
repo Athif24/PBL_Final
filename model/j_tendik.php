@@ -1,7 +1,7 @@
 <?php
-class j_mahasiswa{
+class j_tendik{
     public $db;
-    protected $table = 't_jawaban_mahasiswa';
+    protected $table = 't_jawaban_tendik';
 
     public function __construct() {
         include_once('model/koneksi.php');
@@ -10,8 +10,8 @@ class j_mahasiswa{
     }
 
     public function insertData($data) {
-        $query = $this->db->prepare("INSERT INTO {$this->table} (id, jawaban_mahasiswa_id, responden_mahasiswa_id, soal_id, jawaban) VALUES (NULL, ?, ?, ?, ?)");
-        $query->bind_param('iiiis', $data['jawaban_mahasiswa_id'], $data['responden_mahasiswa_id'], $data['soal_id'], $data['jawaban']);
+        $query = $this->db->prepare("INSERT INTO {$this->table} (id, jawaban_tendik_id, responden_tendik_id, soal_id, jawaban) VALUES (NULL, ?, ?, ?, ?)");
+        $query->bind_param('iiiis', $data['jawaban_tendik_id'], $data['responden_tendik_id'], $data['soal_id'], $data['jawaban']);
         $query->execute();
     }
 
@@ -32,4 +32,5 @@ class j_mahasiswa{
         $query->execute();
         return $query->get_result();
     }
+
 }

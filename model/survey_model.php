@@ -15,10 +15,10 @@ class survey {
     
         // Prepare statement untuk query insert
         $query = $this->db->prepare("INSERT INTO {$this->table} (user_id, survey_jenis, survey_kode, survey_nama, survey_deskripsi, survey_tanggal) VALUES (?, ?, ?, ?, ?, ?)");
-    
         // Binding parameter ke query
         $query->bind_param('isssss', $data['user_id'], $data['survey_jenis'], $data['survey_kode'], $data['survey_nama'], $data['survey_deskripsi'], $formatted_survey_tanggal);
         
+
         // Eksekusi query untuk menyimpan ke database
         $query->execute();
     }

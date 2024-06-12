@@ -9,7 +9,7 @@
     $password = $_POST['password'];
 
     // Query untuk mendapatkan data user berdasarkan username
-    $query = "SELECT username, password FROM m_user WHERE username = ?";
+    $query = "SELECT user_id ,username, password FROM m_user WHERE username = ?";
     $stmt = $db->prepare($query);
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -24,6 +24,7 @@
         if (password_verify($password, $hashed_password)) {
             // Password valid, set session
             $_SESSION['username'] = $row['username'];
+            $_SESSION['user_id'] = $row['user_id'];
             header("Location: index.php");
             exit;
         } else {

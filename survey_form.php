@@ -78,10 +78,6 @@ if (empty($_SESSION['username'])) {
             <div class="card-body">
               <form action="survey_action.php?act=simpan" method="post" id="form-tambah">
                 <div class="form-group">
-                  <label for="user_id">User ID</label>
-                  <input type="text" name="user_id" id="user_id" class="form-control" required>
-                </div>
-                <div class="form-group">
                   <label for="survey_jenis">Jenis Survey</label>
                   <input name="survey_jenis" id="survey_jenis" class="form-control" required>
                 </div>
@@ -128,16 +124,9 @@ if (empty($_SESSION['username'])) {
                 <form action="survey_action.php?act=edit&id=<?php echo $id ?>" method="post" id="form-tambah">
                   <div class="form-group">
                     <div class="form-group">
-                      <label for="user_id">User ID</label>
-                      <input type="text" name="user_id" id="user_id" class="form-control" required value="<?php echo $row['user_id'] ?>">
-                    </div>
-                    <div class="form-group">
                       <label for="survey_jenis">Jenis Survey</label>
-                      <select name="survey_jenis" id="survey_jenis" class="form-control" required value="<?php echo $row['survey_jenis'] ?>">
-                        <option value="">Pilih Jenis Survey</option>
-                        <option value="Fasilitas">Fasilitas</option>
-                        <option value="Pendidikan">Pendidikan</option>
-                      </select>
+                      <input name="survey_jenis" id="survey_jenis" class="form-control" required value="<?php echo $row['survey_jenis'] ?>">
+                      </input>
                     </div>
                     <div class="form-group">
                       <label for="survey_kode">Survey Code</label>
