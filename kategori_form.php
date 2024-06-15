@@ -75,7 +75,7 @@ if (empty($_SESSION['username'])) {
               <div class="card-tools"></div>
             </div>
             <div class="card-body">
-              <form action="kategori_action.php?act=simpan" method="post" id="form-tambah">
+              <form action="skategori_action.php?act=simpan" method="post" id="form-tambah">
                 <div class="form-group">
                   <label for="kategori_nama">Kategori</label>
                   <input required name="kategori_nama" id="kategori_nama" class="form-control">

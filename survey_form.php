@@ -13,7 +13,6 @@ if (empty($_SESSION['username'])) {
   exit;
 }
 ?>
-?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -17,15 +17,6 @@ if ($act == 'simpan') {
     header('location: jawaban_mahasiswa.php?status=sukses&message=Data berhasil disimpan');
 }
 
-if ($act == 'hapus') {
-    $id = $_GET['id'];
-
-    $hapus = new j_mahasiswa();
-    $hapus->deleteData($id);
-
-    header('location: jawaban_mahasiswa.php?status=sukses&message=Data berhasil dihapus');
-}
-
 if ($act == 'view') {
     $id = $_GET['id'];
 

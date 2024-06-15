@@ -18,19 +18,22 @@
                     window.location.href = 'login.php';
                     break;
                 case "Mahasiswa":
-                    window.location.href = 'indexuser.php';
+                    window.location.href = 'responden_mahasiswa_form.php?bio=mahasiswa';
                     break;
                 case "Dosen":
-                    window.location.href = 'indexdosen.php';
+                    window.location.href = 'responden_dosen_form.php?bio=dosen';
+                    break;
+                case "tendik":
+                    window.location.href = 'responden_tendik_form.php?bio=tendik';
                     break;
                 case "Orang Tua":
-                    window.location.href = 'indexorangtua.php';
+                    window.location.href = 'responden_ortu_form.php?bio=ortu';
                     break;
                 case "Alumni":
-                    window.location.href = 'indexalumni.php';
+                    window.location.href = 'responden_alumni_form.php?bio=alumni';
                     break;
                 case "Industri":
-                    window.location.href = 'indexindustri.php';
+                    window.location.href = 'responden_industri_form.php?bio=industri';
                     break;
                 default:
                     if (selectElement.value !== "") {
@@ -56,6 +59,7 @@
                                     <option value="Admin">Admin</option>
                                     <option value="Mahasiswa">Mahasiswa</option>
                                     <option value="Dosen">Dosen</option>
+                                    <option value="tendik">Tenaga Pendidik</option>
                                     <option value="Orang Tua">Orang Tua</option>
                                     <option value="Alumni">Alumni</option>
                                     <option value="Industri">Industri</option>

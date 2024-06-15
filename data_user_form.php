@@ -6,10 +6,9 @@
   session_start();
 
   if (empty($_SESSION['username'])) {
-    header("Location: login.php");
+    header("Location: loginpage/login.php");
     exit;
   }
-?>
 ?>
 
 <!DOCTYPE html>
@@ -72,10 +71,6 @@
         </div>
         <div class="card-body">
           <form action="data_user_action.php?act=simpan" method="post" id="form-tambah">
-            <div class="form-group">
-              <label for="user_id">Kode Pengguna</label>
-              <input type="text" name="user_id" id="user_id" class="form-control">
-            </div>
             <div class="form-group">
               <label for="username">Nama Pengguna</label>
               <input required type="text" name="username" id="username" class="form-control">

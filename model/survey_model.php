@@ -4,7 +4,7 @@ class survey {
     protected $table = 'm_survey';
 
     public function __construct(){
-        include_once('koneksi.php');
+        include('koneksi.php');
         $this->db = $db;
         $this->db->set_charset('utf8');
     }
@@ -65,6 +65,21 @@ class survey {
 
         // eksekusi query
         $query->execute();
+    }
+
+    public function getSurveyId() {
+        $query = $this->db->prepare("SELECT survey_id FROM {$this->table} WHERE survey_jenis = ?");
+    
+        $query->bind_param('s', $_SESSION['user']);
+        
+        $query->execute();
+        
+        $result = $query->get_result();
+        if ($row = $result->fetch_assoc()) {
+            return $row['survey_id'];
+        } else {
+            return null;
+        }
     }
 }
 ?>

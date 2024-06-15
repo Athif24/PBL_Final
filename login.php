@@ -19,6 +19,11 @@
 </head>
 
 <style>
+  .survey{
+    text-align: center;
+    text-align: justify;
+    margin-top: auto;
+  }
   .login-page{
     background-color: #40B3A2;
   }
@@ -97,6 +102,10 @@
           <div class="col-12">
             <button type="submit" class="btn btn-block"><i class="animation"></i>Login<i class="animation"></i>
             </button>
+          </div>
+          <div>
+            <p></p>
+            <a class="survey" type="text" href="loginresponden.php">Masuk Ke survey</a>
           </div>
           <!-- /.col -->
       </div>

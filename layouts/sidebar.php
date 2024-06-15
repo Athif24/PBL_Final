@@ -86,37 +86,37 @@
               </a>
               <ul class="nav nav-treeview">
               <li class="nav-item">
-              <a href="jawaban_dosen.php" class="nav-link <?php echo ($menu == 't_responden_dosen')? 'active' : '' ?>">
+              <a href="responden_dosen.php" class="nav-link <?php echo ($menu == 't_responden_dosen')? 'active' : '' ?>">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
                     <p>Dosen</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="jawaban_mahasiswa.php" class="nav-link <?php echo ($menu == 't_responden_mahasiswa')? 'active' : '' ?>">
+                  <a href="responden_mahasiswa.php" class="nav-link <?php echo ($menu == 't_responden_mahasiswa')? 'active' : '' ?>">
                   <i class="nav-icon fas fa-user-graduate"></i>
                     <p>Mahasiswa</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                  <a href="jawaban_tendik.php" class="nav-link <?php echo ($menu == 't_responden_tendik')? 'active' : '' ?>">
+                  <a href="responden_tendik.php" class="nav-link <?php echo ($menu == 't_responden_tendik')? 'active' : '' ?>">
                   <i class="nav-icon fas fa-university"></i>
                     <p>Tenaga Pendidik</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="jawaban_ortu.php" class="nav-link <?php echo ($menu == 't_responden_ortu')? 'active' : '' ?>">
+                  <a href="responden_ortu.php" class="nav-link <?php echo ($menu == 't_responden_ortu')? 'active' : '' ?>">
                   <i class="nav-icon fas fa-male"></i>
                     <p>Orang Tua</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="jawaban_alumni.php" class="nav-link  <?php echo ($menu == 't_responden_alumni')? 'active' : '' ?>">
+                  <a href="responden_alumni.php" class="nav-link  <?php echo ($menu == 't_responden_alumni')? 'active' : '' ?>">
                   <i class="nav-icon fas fa-medal"></i>
                     <p>Alumni</small></p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="jawaban_industri.php" class="nav-link  <?php echo ($menu == 't_responden_industri')? 'active' : '' ?>">
+                  <a href="responden_industri.php" class="nav-link  <?php echo ($menu == 't_responden_industri')? 'active' : '' ?>">
                   <i class="nav-icon fas fa-industry"></i>
                     <p>industri</p>
                   </a>
