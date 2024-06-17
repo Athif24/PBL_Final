@@ -127,7 +127,7 @@ $_SESSION['user'] = $user;
         <form action="responden_dosen_action.php?act=simpan" method="post">
           <div class="form-group">
             <label for="responden_tanggal">Tanggal</label>
-            <input type="datetime-local" class="form-control" id="responden_tanggal" name="responden_tanggal" required>
+            <input type="datetime-local" class="form-control" id="responden_tanggal" name="responden_tanggal" required readonly>
           </div>
 
           <div class="form-group">
