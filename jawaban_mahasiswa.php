@@ -102,7 +102,6 @@ if (empty($_SESSION['username'])) {
                                 <td>' . $row['jawaban'] . '</td>
                                 <td>
                                     <a title="View Data" href="jawaban_mahasiswa_form.php?act=view&id=' . $row['jawaban_mahasiswa_id'] . '" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
-                                    <a onclick="return confirm(\'Apakah anda yakin menghapus data ini?\')" title="Hapus Data" href="jawaban_mahasiswa_action.php?act=hapus&id=' . $row['jawaban_mahasiswa_id'] . '" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>';
 

@@ -14,13 +14,14 @@ $surveyid = $survey -> getSurveyId();
         'responden_tanggal' => $_POST['responden_tanggal'], 
         'responden_nopeg' => $_POST['responden_nopeg'],
         'responden_nama' => $_POST['responden_nama'],
-        'responden_prodi' => $_POST['responden_unit']
+        'responden_unit' => $_POST['responden_unit']
     ];
 
     $insert = new tendik_form_model();
-    $insert->insertData($data);
+    $lastInsert = $insert->insertData($data);
 
-    header('location: responden_tendik.php?status=sukses&message=Data berhasil disimpan');
+    // header('location: responden_mahasiswa.php?status=sukses&message=Data berhasil disimpan');
+    header('location: jawaban_tendik_form.php?bio=tendik&tendik=' . $lastInsert);
  }
 
  if($act == 'edit'){
@@ -31,7 +32,7 @@ $surveyid = $survey -> getSurveyId();
       'responden_tanggal' => $_POST['responden_tanggal'], 
       'responden_nim' => $_POST['responden_nim'],
       'responden_nama' => $_POST['responden__nama'],
-      'responden_prodi' => $_POST['responden_unit']
+      'responden_unit' => $_POST['responden_unit']
   ];
 
     $update = new tendik_form_model();

@@ -106,7 +106,7 @@ if (empty($_SESSION['username'])) {
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Edit Kategori</h3>
+                <h3 class="card-title">Edit Survey</h3>
                 <div class="card-tools"></div>
               </div>
               <div class="card-body">
@@ -115,7 +115,7 @@ if (empty($_SESSION['username'])) {
                 $id = $_GET['id'];
 
                 $survey = new survey();
-                $list = $survey->getData();
+                $list = $survey->getDataById($id);
 
                 $row = $list->fetch_assoc();
                 ?>

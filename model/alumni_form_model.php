@@ -18,6 +18,7 @@ class alumni_form_model {
         
         // execute query to save to database
         $query->execute();
+        return $query->insert_id;
     }
 
     public function getData(){
@@ -59,6 +60,11 @@ class alumni_form_model {
 
         // execute query
         $query->execute();
+    }
+
+    public function count(){
+        $count = $this->db->query("SELECT * FROM {$this->table}");
+        return $count->num_rows;
     }
 }
 ?>

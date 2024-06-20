@@ -17,16 +17,43 @@
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 </head>
-
 <style>
-  .survey{
-    text-align: center;
-    text-align: justify;
-    margin-top: auto;
+  body {
+    background: url('dist/img/polinema1.png') no-repeat center center fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
   }
-  .login-page{
+
+  .container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .survey {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  .survey:hover {
+    background-color: #0056b3;
+  }
+
+  .login-page {
     background-color: #40B3A2;
   }
+
   .btn {
     outline: 0;
     display: inline-flex;
@@ -103,8 +130,8 @@
             <button type="submit" class="btn btn-block"><i class="animation"></i>Login<i class="animation"></i>
             </button>
           </div>
-          <div>
-            <p></p>
+          </div>
+          <div class="container col-12">
             <a class="survey" type="text" href="loginresponden.php">Masuk Ke survey</a>
           </div>
           <!-- /.col -->

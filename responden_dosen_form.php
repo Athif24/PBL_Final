@@ -1,4 +1,3 @@
-
 <?php
 $menu = 'survey';
 include_once('model/dosen_form_model.php');
@@ -12,6 +11,7 @@ if (session_status() === PHP_SESSION_NONE)
 $user = $_GET['bio'];
 $_SESSION['user'] = $user;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,24 +22,24 @@ $_SESSION['user'] = $user;
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Custom CSS for Centering -->
   <style>
     body {
       background-color: #f4f6f9;
       font-family: 'Source Sans Pro', sans-serif;
+    }
+    .centered-form {
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 10vh;
-      padding: 20px;
-    }
-    .centered-container {
-      max-width: 800px;
-      width: 100%;
     }
     .form-container {
+      max-width: 980px;
+      width: 100%;
       background: #fff;
       padding: 20px;
       border-radius: 10px;
@@ -51,7 +51,6 @@ $_SESSION['user'] = $user;
       text-align: center;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      padding: 10px;
     }
     .content-header {
       background-color: #007bff;
@@ -64,7 +63,6 @@ $_SESSION['user'] = $user;
     .content-header h1 {
       color: white;
       margin: 0;
-      font-size: 24px;
     }
     .form-group label {
       font-weight: bold;
@@ -83,34 +81,24 @@ $_SESSION['user'] = $user;
       background-color: #0056b3;
       border-color: #0056b3;
     }
-
-    @media (max-width: 767px) {
-      .content-header h1 {
-        font-size: 20px;
-      }
-      .form-group {
-        margin-bottom: 10px;
-      }
-    }
   </style>
 </head>
-
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
-<div class="wrapper centered-container">
+<div class="wrapper" style="padding: 1%;">
 
   <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-12">
-          <h1>Survey Kepuasan Pelanggan Polinema</h1>
+          <h1 style="font-size:xx-large;">Survey Kepuasan Pelanggan Polinema</h1>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Main content -->
-  <section class="content">
+  <section class="content centered-form">
     <!-- Default box -->
     <div class="card form-container">
       <div class="card-header">
@@ -122,7 +110,6 @@ $_SESSION['user'] = $user;
           </button>
         </div>
       </div>
-
       <div class="card-body">
         <form action="responden_dosen_action.php?act=simpan" method="post">
           <div class="form-group">
@@ -145,27 +132,27 @@ $_SESSION['user'] = $user;
             <input type="text" class="form-control" id="responden_unit" name="responden_unit" required>
           </div>
 
-          <div class="form-group">
-            <button type="submit" name="simpan" class="btn btn-primary btn-block">Submit</button>
-          </div>
+          <button type="submit" href="responden_dosen_form.php" name="simpan" class="btn btn-primary">Submit</button>
         </form>
       </div>
       <!-- /.card-body -->
+      <!-- /.card-footer-->
     </div>
-    <!-- /.card -->
   </section>
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+</div>
+<!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/js/demo.min.js"></script>
+<script src="dist/js/demo.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const dateTimeField = document.getElementById('responden_tanggal');

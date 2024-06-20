@@ -18,9 +18,9 @@ $surveyid = $survey -> getSurveyId();
     ];
 
     $insert = new dosen_form_model();
-    $insert->insertData($data);
-
-    header('location: responden_dosen.php?status=sukses&message=Data berhasil disimpan');
+    $lastInsert = $insert->insertData($data);
+    
+    header('location: jawaban_dosen_form.php?bio=dosen&dosen=' . $lastInsert);
  }
 
  if($act == 'edit'){

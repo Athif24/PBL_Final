@@ -18,6 +18,8 @@ class dosen_form_model {
         
         // eksekusi query untuk menyimpan ke database
         $query->execute();
+        return $query->insert_id;
+
     }
 
     public function getData(){
@@ -59,6 +61,10 @@ class dosen_form_model {
 
         // eksekusi query
         $query->execute();
+    }
+    public function count(){
+        $count = $this->db->query("SELECT * FROM {$this->table}");
+        return $count->num_rows;
     }
 }
 ?>

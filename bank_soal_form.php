@@ -81,26 +81,26 @@ if (empty($_SESSION['username'])) {
                 </div>
                 <div class="form-group">
                   <label for="survey_id">Survey ID</label>
-                  <select required type="text" name="survey_id" id="survey_id" class="form-control">
-                    <option value="">Pilih Salah Satu</option>
-                    <option value="29" id="survey_id">Alumni</option>
-                    <option value="35" id="survey_id">Dosen</option>
-                    <option value="36" id="survey_id">Mahasiswa</option>
-                    <option value="37" id="survey_id">Tenaga Pendidik</option>
-                    <option value="38" id="survey_id">industri</option>
-                    <option value="39" id="surveyid">Orang Tua</option>
-                  </select>
+                  <input required type="text" name="survey_id" id="survey_id" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label for="kategori_id">Kategori ID</label> 
                   <select required name="kategori_id" id="kategori_id" class="form-control">
-                    <option value="">Pilih Salah Satu</option>
-                    <option id="ketegori-id" value="27">Survey Layanan Akademik</option>
-                    <option id="kategori_id" value="29">Suevey Layanan Non-akademik</option>
-                    <option id="ketegori_id" value="30">Survey Layanan Sarana dan Prasarana</option>
-                    <option id="ketegori_id" value="31">Kritik Dan Saran</option>
-                  </select>
+                  <option id="ketegori-id" value="1">Kondisi Sarana Prasarana</option>
+                    <option id="kategori_id" value="2">Kemampuan Tenaga Pengajar untuk Kegiatan Akademik</option>
+                    <option id="ketegori_id" value="3">Layanan Masalah Akademik dan Non Akademik</option>
+                    <option id="ketegori_id" value="4">Keadilan Perlakuan Akademik</option>
+                    <option id="ketegori_id" value="5">Layanan Keuangan dan Prestasi Mahasiswa</option>
+                    <option id="ketegori_id" value="6">Transparansi Informasi dan Layanan Akademik</option>
+                    <option id="ketegori_id" value="7">Uraian</option>
+                    <option id="ketegori_id" value="8">Sistem Pengelolaan Sumber Daya Manusia</option>
+                    <option id="ketegori_id" value="9">Sistem Pengelolaan Keuangan</option>
+                    <option id="ketegori_id" value="10">Sistem Pengelolaan Sarana dan Prasarana</option>
+                    <option id="ketegori_id" value="11">Sistem Pengelolaan Kegiatan Penelitian</option>
+                    <option id="ketegori_id" value="12">Layanan Pasca Lulus</option>
+                    <option id="ketegori_id" value="13">Pelacakan Pengguna Lulusan Politeknik Negeri Malang</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
@@ -145,24 +145,25 @@ if (empty($_SESSION['username'])) {
               <form action="bank_soal_action.php?act=edit&id=<?php echo $id ?>" method="post" id="form-tambah">
                 <div class="form-group">
                   <label for="survey_id">Survey ID</label>
-                  <select type="text" name="survey_id" id="survey_id" class="form-control" value="<?php echo $data['survey_id'] ?>">
-                  <option value="">Pilih Salah Satu</option>
-                    <option value="29" id="survey_id">Alumni</option>
-                    <option value="35" id="survey_id">Dosen</option>
-                    <option value="36" id="survey_id">Mahasiswa</option>
-                    <option value="37" id="survey_id">Tenaga Pendidik</option>
-                    <option value="38" id="survey_id">industri</option>
-                    <option value="39" id="surveyid">Orang Tua</option>
-                  </select>
+                  <input type="text" name="survey_id" id="survey_id" class="form-control" value="<?php echo $data['survey_id'] ?>">
                 </div>
                 <div class="form-group">
                   <label for="kategori_id">Kategori ID</label>
                   <select required type="text" name="kategori_id" id="kategori_id" class="form-control" value="<?php echo $data['kategori_id'] ?>">
-                  <option value="">Pilih Salah Satu</option>
-                    <option id="ketegori-id" value="27">Survey Layanan Akademik</option>
-                    <option id="kategori_id" value="29">Suevey Layanan Non-akademik</option>
-                    <option id="ketegori_id" value="30">Survey Layanan Sarana dan Prasarana</option>
-                    <option id="ketegori_id" value="31">Kritik Dan Saran</option>
+                    <option value="">Pilih Salah Satu</option>
+                    <option id="ketegori-id" value="1">Kondisi Sarana Prasarana</option>
+                    <option id="kategori_id" value="2">Kemampuan Tenaga Pengajar untuk Kegiatan Akademik</option>
+                    <option id="ketegori_id" value="3">Layanan Masalah Akademik dan Non Akademik</option>
+                    <option id="ketegori_id" value="4">Keadilan Perlakuan Akademik</option>
+                    <option id="ketegori_id" value="5">Layanan Keuangan dan Prestasi Mahasiswa</option>
+                    <option id="ketegori_id" value="6">Transparansi Informasi dan Layanan Akademik</option>
+                    <option id="ketegori_id" value="7">Uraian</option>
+                    <option id="ketegori_id" value="8">Sistem Pengelolaan Sumber Daya Manusia</option>
+                    <option id="ketegori_id" value="9">Sistem Pengelolaan Keuangan</option>
+                    <option id="ketegori_id" value="10">Sistem Pengelolaan Sarana dan Prasarana</option>
+                    <option id="ketegori_id" value="11">Sistem Pengelolaan Kegiatan Penelitian</option>
+                    <option id="ketegori_id" value="12">Layanan Pasca Lulus</option>
+                    <option id="ketegori_id" value="13">Pelacakan Pengguna Lulusan Politeknik Negeri Malang</option>
                 </select>
                 </div>
                 <div class="form-group">

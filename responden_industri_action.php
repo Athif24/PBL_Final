@@ -20,9 +20,10 @@ if ($act == 'simpan') {
     ];
 
     $insert = new industri_form_model();
-    $insert->insertData($data);
+    $lastInsert = $insert->insertData($data);
 
-    header('location: responden_industri.php?status=sukses&message=Data berhasil disimpan');
+    // header('location: responden_mahasiswa.php?status=sukses&message=Data berhasil disimpan');
+    header('location: jawaban_industri_form.php?bio=industri&industri=' . $lastInsert);
 }
 
 if ($act == 'edit') {

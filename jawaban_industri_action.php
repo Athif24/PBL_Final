@@ -1,11 +1,11 @@
 <?php
-include_once ('model/j_mahasiswa.php');
+include_once ('model/j_industri.php');
 
 $act = $_GET['act'];
 
 if ($act == 'simpan') {
     $dataDefault = [
-        'responden_mahasiswa_id' => $_POST['responden_mahasiswa_id'],
+        'responden_industri_id' => $_POST['responden_industri_id'],
         'survey_id' => $_POST['survey_id'],
     ];
 
@@ -20,7 +20,7 @@ if ($act == 'simpan') {
     }
     echo var_dump($dataJawaban);
 
-    $insert = new j_mahasiswa();
+    $insert = new j_industri();
 
     foreach ($dataJawaban as $key => $value) {
         $data = $dataDefault;
@@ -32,13 +32,13 @@ if ($act == 'simpan') {
 
     echo "Data berhasil disimpan";
 
-    header('location: terimakasih.php');
+    header('location: terimakasih.php?status=sukses&message=Data berhasil disimpan');
 }
 
 if ($act == 'view') {
     $id = $_GET['id'];
 
-    $view = new j_mahasiswa();
+    $view = new j_industri();
     $result = $view->viewData($id);
 
     if ($result->num_rows > 0) {
@@ -48,8 +48,8 @@ if ($act == 'view') {
             echo var_dump($answer) . ": " . "<br>";
 
             // Tampilkan data yang diperoleh dari viewData
-            echo "Jawaban Mahasiswa ID: " . $answer['jawaban_mahasiswa_id'] . "<br>";
-            echo "Responden Mahasiswa ID: " . $answer['responden_mahasiswa_id'] . "<br>";
+            echo "Jawaban industri ID: " . $answer['jawaban_industri_id'] . "<br>";
+            echo "Responden industri ID: " . $answer['responden_industri_id'] . "<br>";
             echo "Soal ID: " . $answer['soal_id'] . "<br>";
             echo "Jawaban: " . $answer['jawaban'] . "<br>";
 

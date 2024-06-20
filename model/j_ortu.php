@@ -9,10 +9,12 @@ class j_ortu{
         $this->db->set_charset('utf8');
     }
 
-    public function insertData($data) {
-        $query = $this->db->prepare("INSERT INTO {$this->table} (id, jawaban_ortu_id, responden_ortu_id, soal_id, jawaban) VALUES (NULL, ?, ?, ?, ?)");
-        $query->bind_param('iiiis', $data['jawaban_ortu_id'], $data['responden_ortu_id'], $data['soal_id'], $data['jawaban']);
+    public function insertData($data)
+    {
+        $query = $this->db->prepare("INSERT INTO {$this->table} (jawaban_ortu_id, responden_ortu_id, soal_id, jawaban) VALUES (NULL,   ?, ?, ?)");
+        $query->bind_param('iis', $data['responden_ortu_id'], $data['soal_id'], $data['jawaban']);
         $query->execute();
+        echo $query->insert_id;
     }
 
     public function getData() {
@@ -27,7 +29,7 @@ class j_ortu{
     }
 
     public function viewData($id) {
-        $query = $this->db->prepare("SELECT * FROM {$this->table} WHERE id = ?");
+        $query = $this->db->prepare("SELECT * FROM {$this->table} WHERE responden_ortu_id = ?");
         $query->bind_param('i', $id);
         $query->execute();
         return $query->get_result();

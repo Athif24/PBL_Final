@@ -24,9 +24,10 @@ if ($act == 'simpan') {
     ];
 
     $insert = new ortu_form_model(); // Updated class name
-    $insert->insertData($data);
+    $lastInsert = $insert->insertData($data);
 
-    header('location: responden_ortu.php?status=sukses&message=Data berhasil disimpan'); // Updated redirect URL
+    // header('location: responden_mahasiswa.php?status=sukses&message=Data berhasil disimpan');
+    header('location: jawaban_ortu_form.php?bio=orang%20tua&orang_tua=' . $lastInsert);
 }
 
 if ($act == 'edit') {

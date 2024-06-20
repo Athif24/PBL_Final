@@ -20,9 +20,10 @@ if ($act == 'simpan') {
     ];
 
     $insert = new alumni_form_model();
-    $insert->insertData($data);
+    $lastInsert = $insert->insertData($data);
 
-    header('location: responden_alumni.php?status=sukses&message=Data berhasil disimpan');
+    // header('location: responden_mahasiswa.php?status=sukses&message=Data berhasil disimpan');
+    header('location: jawaban_alumni_form.php?bio=alumni&alumni=' . $lastInsert);
 }
 
 if ($act == 'edit') {

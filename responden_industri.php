@@ -113,8 +113,7 @@ if (empty($_SESSION['username'])) {
                       <td>'.$row['responden_hp'].'</td>
                       <td>'.$row['responden_kota'].'</td>
                       <td>
-                        <a title="View" href="responden_industri_form.php?act=view&id='.$row['responden_industri_id'].'" class="btn btn-primary btn-sm"><i class="fa fa-view"></i></a>
-                        <a onclick="return confirm(\'Apakah anda yakin menghapus data ini?\')" title="Hapus Data" href="responden_industri_action.php?act=hapus&id='.$row['responden_industri_id'].'" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                      <a title="View" href="jawaban_detail.php?bio=industri&id=' . $row['responden_industri_id'] . '" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
                       </td>
                     </tr>';
 

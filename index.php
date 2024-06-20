@@ -1,4 +1,11 @@
 <?php
+include_once('model/mahasiswa_form_model.php');
+include('model/dosen_form_model.php');
+include('model/alumni_form_model.php');
+include('model/tendik_form_model.php');
+include('model/industri_form_model.php');
+include('model/ortu_form_model.php');
+
 if (session_status() === PHP_SESSION_NONE)
   session_start();
 
@@ -9,6 +16,7 @@ if (empty($_SESSION['username'])) {
 
 $menu = 'index';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,8 +85,6 @@ $menu = 'index';
 }
 </style>
 
-<body class="hold-transition sidebar-mini">
-
   <!-- Site wrapper -->
   <div class="wrapper">
     <!-- Navbar -->
@@ -125,29 +131,15 @@ $menu = 'index';
                     <!-- small box -->
                     <div class="small-box bg-success">
                       <div class="inner">
-                        <h3>150</h3>
+                        <?php $mahasiswa_total = new mahasiswa_form_model(); ?>
+                      <h3><?= $mahasiswa_total->count(); ?></h3>
 
-                        <p>New Orders</p>
+                        <p>Mahasiswa</p>
                       </div>
                       <div class="icon">
                         <i class="ion ion-bag"></i>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-lg-2 col-4">
-                    <!-- small box -->
-                    <div class="small-box bg-warning">
-                      <div class="inner">
-                        <h3>53<sup style="font-size: 20px"></sup></h3>
-
-                        <p>Bounce Rate</p>
-                      </div>
-                      <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
-                      </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="responden_mahasiswa.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <!-- ./col -->
@@ -155,59 +147,79 @@ $menu = 'index';
                     <!-- small box -->
                     <div class="small-box bg-success">
                       <div class="inner">
-                        <h3>44</h3>
+                      <?php $dosen_total = new dosen_form_model(); ?>
+                      <h3><?= $dosen_total->count(); ?></h3>
 
-                        <p>User Registrations</p>
+                        <p>Dosen</p>
                       </div>
                       <div class="icon">
-                        <i class="ion ion-person-add"></i>
+                        <i class="ion ion-stats-bars"></i>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="responden_dosen.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <!-- ./col -->
                   <div class="col-lg-2 col-4">
                     <!-- small box -->
-                    <div class="small-box bg-danger">
+                    <div class="small-box bg-success">
                       <div class="inner">
-                        <h3>65</h3>
+                      <?php $mahasiswa_total = new tendik_form_model(); ?>
+                      <h3><?= $mahasiswa_total->count(); ?></h3>
 
-                        <p>Unique Visitors</p>
+                        <p>Tenaga Pendidik</p>
+                      </div>
+                      <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                      </div>
+                      <a href="responden_tendik.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-lg-2 col-4">
+                    <!-- small box -->
+                    <div class="small-box bg-success">
+                      <div class="inner">
+                      <?php $alumni_total = new alumni_form_model(); ?>
+                      <h3><?= $alumni_total->count(); ?></h3>
+
+                        <p>Alumni</p>
                       </div>
                       <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="responden_alumni.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
 
                   <div class="col-lg-2 col-4">
                     <!-- small box -->
-                    <div class="small-box bg-danger">
+                    <div class="small-box bg-success">
                       <div class="inner">
-                        <h3>65</h3>
+                      <?php $mahasiswa_total = new industri_form_model(); ?>
+                      <h3><?= $mahasiswa_total->count(); ?></h3>
 
-                        <p>Unique Visitors</p>
+                        <p>industri</p>
                       </div>
                       <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="responden_industri.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
 
                   <div class="col-lg-2 col-4">
                     <!-- small box -->
-                    <div class="small-box bg-danger">
+                    <div class="small-box bg-success">
                       <div class="inner">
-                        <h3>65</h3>
+                      <?php $mahasiswa_total = new ortu_form_model(); ?>
+                      <h3><?= $mahasiswa_total->count(); ?></h3>
 
-                        <p>Unique Visitors</p>
+                        <p>Orang Tua</p>
                       </div>
                       <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="responden_ortu.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <!-- ./col -->

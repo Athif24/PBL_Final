@@ -1,13 +1,13 @@
 <?php
 $menu = 'data_user';
-include_once ('model/j_mahasiswa.php');
+include_once ('model/j_dosen.php');
 include_once ('model/survey_model.php');
 include_once ('model/bank_soal_model.php');
 
 if (session_status() === PHP_SESSION_NONE)
   session_start();
 
-if (isset($_GET['bio']) && $_GET['bio'] != 'mahasiswa' && isset($_GET['mahasiswa'])) {
+if (isset($_GET['bio']) && $_GET['bio'] != 'dosen' && isset($_GET['dosen'])) {
   header("Location: login.php");
   exit;
 }
@@ -24,7 +24,7 @@ $surveyNama = $surveyData->fetch_assoc()['survey_nama'];
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jawaban Mahasiswa</title>
+  <title>Jawaban dosen</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -126,8 +126,8 @@ $surveyNama = $surveyData->fetch_assoc()['survey_nama'];
       ?>
       <div class="card mx-auto max-w-3xl">
         <div class="card-body">
-          <form action="jawaban_mahasiswa_action.php?act=simpan" method="post" id="form-tambah" class="space-y-4">
-            <input type="hidden" name="responden_mahasiswa_id" value="<?= $_GET['mahasiswa'] ?>" id="">
+          <form action="jawaban_dosen_action.php?act=simpan" method="post" id="form-tambah" class="space-y-4">
+            <input type="hidden" name="responden_dosen_id" value="<?= $_GET['dosen'] ?>" id="">
             <input type="hidden" name="survey_id" id="" value="<?= $surveyid ?>">
             <?php
             $chose = ['Tidak Puas' => 'fi-sr-face-disappointed', 'Kurang Puas' => 'fi-sr-sad', 'Cukup Puas' => 'fi-sr-meh', 'Puas' => 'fi-sr-grin', 'Sangat Puas' => 'fi-sr-grin-stars'];
@@ -171,7 +171,7 @@ $surveyNama = $surveyData->fetch_assoc()['survey_nama'];
             ?>
                 <div class="form-group flex justify-center space-x-4">
                   <button type="submit" name="simpan" class="btn btn-primary px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" value="simpan">Simpan</button>
-                  <a href="jawaban_mahasiswa.php" class="btn btn-warning px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Kembali</a>
+                  <a href="jawaban_dosen.php" class="btn btn-warning px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Kembali</a>
                 </div>
           </form>
         </div>

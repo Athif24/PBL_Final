@@ -87,7 +87,6 @@
           <table class="table table-sm table-bordered">
             <thead>
               <tr>
-                <th>id</th>
                 <th>Kategori ID</th>
                 <th>Kategori Soal</th>
                 <th>Action</th>
@@ -101,7 +100,6 @@
                 $i = 1;
                 while($row = $list->fetch_assoc()){
                   echo '<tr>
-                      <td>' . $i . '</td>
                       <td>'.$row['kategori_id'].'</td>
                       <td>'.$row['kategori_nama'].'</td>
                       <td>

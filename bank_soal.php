@@ -83,9 +83,6 @@
           <table class="table table-sm table-bordered">
             <thead>
               <tr>
-                <th>No</th>
-                <th>Survey ID</th>
-                <th>Kategori ID</th>
                 <th>No Urut</th>
                 <th>Jenis Soal</th>
                 <th>Soal</th>
@@ -100,9 +97,6 @@
                 $i = 1;
                 while($row = $list->fetch_assoc()){
                   echo '<tr>
-                      <td>' . $i . '</td>
-                      <td>'.$row['survey_id'].'</td>
-                      <td>'.$row['kategori_id'].'</td>
                       <td>'.$row['no_urut'].'</td>
                       <td>'.$row['soal_jenis'].'</td>
                       <td>'.$row['soal_nama'].'</td>
